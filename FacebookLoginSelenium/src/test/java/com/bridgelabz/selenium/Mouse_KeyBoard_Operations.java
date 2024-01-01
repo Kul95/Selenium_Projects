@@ -76,5 +76,16 @@ public class Mouse_KeyBoard_Operations {
         driver.findElement(By.id("2")).sendKeys("Sharma");
         Thread.sleep(2000);
     }
+@Test
+    public void actionClass() throws InterruptedException {
+        driver = new ChromeDriver();
+        driver.get("file:///C:/Users/Admin/Desktop/Selenium/demo2.html");
+        driver.manage().window().maximize();
+        driver.switchTo().frame(0);
+//        driver.findElement(By.id("t1")).sendKeys("Santosh");
+        Thread.sleep(2000);
+        driver.switchTo().defaultContent();
+        driver.findElement(By.id("t2")).sendKeys("Sharma");
+    }
 
 }
