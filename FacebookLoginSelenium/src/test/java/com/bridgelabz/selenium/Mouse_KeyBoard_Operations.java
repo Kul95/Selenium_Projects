@@ -1,5 +1,6 @@
 package com.bridgelabz.selenium;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -62,6 +63,18 @@ public class Mouse_KeyBoard_Operations {
         Thread.sleep(2000);
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("window.scrollBy(0,50)");
+    }
+@Test
+    public void desable_enable_Input() throws InterruptedException {
+        driver = new ChromeDriver();
+        driver.get("file:///C:/Users/Admin/Desktop/Selenium/index1.html");
+        driver.manage().window().maximize();
+//Enable.....
+        driver.findElement(By.id("1")).sendKeys("Sharma");
+        Thread.sleep(2000);
+//Disable.............
+        driver.findElement(By.id("2")).sendKeys("Sharma");
+        Thread.sleep(2000);
     }
 
 }
