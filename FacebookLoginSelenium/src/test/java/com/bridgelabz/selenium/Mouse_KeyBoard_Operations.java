@@ -1,5 +1,6 @@
 package com.bridgelabz.selenium;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -52,8 +53,15 @@ public class Mouse_KeyBoard_Operations {
         robot.keyPress(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_CONTROL);
         robot.keyRelease(KeyEvent.VK_V);
-
-
+    }
+@Test
+    public void scrollUp() throws InterruptedException {
+        driver = new ChromeDriver();
+        driver.get("https://www.facebook.com/");
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("window.scrollBy(0,50)");
     }
 
 }
