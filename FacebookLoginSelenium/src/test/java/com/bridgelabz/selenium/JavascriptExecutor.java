@@ -22,4 +22,17 @@ public class JavascriptExecutor {
         alert.accept();
         Thread.sleep(2000);
     }
+@Test
+    public void simpleAlert() throws InterruptedException {
+        driver=new ChromeDriver();
+        driver.get("https://demoqa.com/alerts");
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        driver.findElement(By.id("timerAlertButton")).click();
+        Alert alert=driver.switchTo().alert();
+        Thread.sleep(3000);
+        System.out.println(alert.getText());
+        alert.accept();
+        Thread.sleep(3000);
+    }
 }
