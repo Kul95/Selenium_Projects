@@ -35,8 +35,8 @@ public class FacebookSignupSelenium {
 //        Thread.sleep(1000);
         driver.findElement(By.className("_58mt")).click();
         Thread.sleep(2000);
-//           driver.findElement(By.name("preferred_pronoun")).click();
-        driver.findElement(By.xpath("//button[@id='u_2_s_fX']")).click();
-        Thread.sleep(1000);
+           driver.findElement(By.name("preferred_pronoun")).click();
+//        driver.findElement(By.xpath("//button[@id='u_2_s_fX']")).click();
+
     }
 }

@@ -30,7 +30,7 @@ public class FacebookLoginSelenium {
         Thread.sleep(2000);
         driver.findElement(By.id("did_submit")).click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//font[contains(text(),'find out')]")).click();
+//        driver.findElement(By.xpath("//font[contains(text(),'find out')]")).click();
         Thread.sleep(2000);
     }
 }
