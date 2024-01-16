@@ -81,11 +81,13 @@ public class Mouse_KeyBoard_Operations {
         driver = new ChromeDriver();
         driver.get("file:///C:/Users/Admin/Desktop/Selenium/demo2.html");
         driver.manage().window().maximize();
+        Thread.sleep(2000);
         driver.switchTo().frame(0);
-//        driver.findElement(By.id("t1")).sendKeys("Santosh");
+        driver.findElement(By.id("t1")).sendKeys("Santosh");
         Thread.sleep(2000);
         driver.switchTo().defaultContent();
         driver.findElement(By.id("t2")).sendKeys("Sharma");
     }
-
 }
+//Abslute x path.....
+///html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[1]/div/div/div[4]/div[1]/table

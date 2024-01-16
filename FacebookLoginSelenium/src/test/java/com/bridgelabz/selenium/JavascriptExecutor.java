@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+
 public class JavascriptExecutor {
     public WebDriver driver;
 
@@ -59,10 +61,13 @@ public class JavascriptExecutor {
     }
 
     @Test
-    public void simpleAlert4() throws InterruptedException {
+    public void simpleAlert4() throws InterruptedException, AWTException {
         driver = new ChromeDriver();
         driver.get("https://demoqa.com/alerts");
         driver.manage().window().maximize();
+        Thread.sleep(2000);
+        Robot robot=new Robot();
+        robot.mouseWheel(5);
         Thread.sleep(2000);
         driver.findElement(By.xpath("//button[@id='promtButton']")).click();
         Alert alert = driver.switchTo().alert();
